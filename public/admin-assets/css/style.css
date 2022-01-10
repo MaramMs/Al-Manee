@@ -1,0 +1,526 @@
+.my_sidebar {
+    left: 0;
+}
+
+[dir="rtl"] .my_sidebar {
+    left: auto;
+    right: 0;
+}
+html{
+    direction: rtl;
+}
+body{
+    /* direction: rtl; */
+    text-align: right;
+    max-width: 1920px;
+    margin: 0 auto;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin: 0 auto;
+}
+header{
+    position: relative;
+    background-image: url("../image/people-cooperation-accountant-consulting-accounting-pointing.jpg");
+    height: 120vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 1920px;
+
+
+}
+.layout{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #236c97;
+    opacity: 0.6;
+
+}
+
+.navbar{
+
+    padding: 0.5rem 3rem;
+    background-color:#e7eff3;
+    opacity: 0.6;
+}
+.nav-item.dropdown .dropdown-menu {
+    width: 500px;
+    background-color: #fff;
+     left: auto;
+     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.nav-item.dropdown .dropdown-menu  .row{
+    margin-bottom: 10px;
+}
+.dropdown-menu .dropdown-item{
+max-width: 100%;
+}
+.dropdown-menu .dropdown-item img{
+    max-width: 50%;
+}
+.navbar-brand  img{
+    display: block;
+width: 250px;
+ max-width: 100%;
+
+ height: 90px;
+ object-fit:cover;
+}
+.navbar-nav .nav-link{
+    color: #000;
+    font-size: 1.3rem;
+    margin-left: 15px;
+    font-weight: bold;
+}
+.navbar-nav .nav-item.active .nav-link {
+    color:#11a24e;
+}
+.left{
+    margin-right: auto;
+}
+.info{
+width: 500px;
+height: 400px;
+
+position: absolute;
+top: 27%;
+right:5%;
+text-align: right;
+padding: 30px;
+}
+.info h1 ,h2{
+color: #fff;
+margin-bottom: 15px;
+}
+.info p{
+color: #fff;
+}
+.info a{
+background-color: #236c97;
+padding: 5px 25px;
+border-radius: 5px;
+text-decoration: none;
+color: #fff;
+display: inline-block;
+}
+
+.left .whatsapp{
+    color: #11a24e;
+}
+
+@media(max-width:768px){
+    .info h1 ,h2{
+        color: #fff;
+       padding: 10px;
+        }
+    .info p{
+        color: #fff;
+        font-size: 17px;
+        width: 80%;
+        line-height: 1.8;
+ }
+
+}
+/* strat sercives*/
+.sercives{
+margin-top: 50px;
+}
+.sercives .card{
+    height: 31rem;
+}
+ .sercives-info{
+  text-align: center;
+
+}
+ .sercives-info h1{
+    color: #236c97;
+}
+
+.sercives-info p {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    color: #000;
+    margin-top: 20px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+.sercives  .row{
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+.sercives  .ser{
+    max-width: 100%;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+     padding: 40px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+}
+.sercives  .ser img{
+    color: #79a4be;
+    margin: auto;
+    display: inline-block;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+.sercives  .ser a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+
+
+}
+@media(max-width:768px){
+  .sercives  .ser{
+        width: 300px;
+        margin: auto;
+        margin-bottom: 51px;
+    }
+    .sercives-info p {
+        width: 60%;
+        line-height: 1.6;
+        color: #000;
+    }
+}
+/* end sercives*/
+
+
+/* start about-us*/
+  .about-us{
+      background-color: #e7eff3;
+      padding: 30px 0px;
+      height: auto;
+  }
+  .about-us h2{
+      text-align: center;
+      color: #79a4be;
+  }
+  .about-img{
+      max-width: 100%;
+  }
+  .about-img img{
+      max-width: 100%;
+  }
+  .about-us .about-info{
+      text-align: right;
+      top: 20%;
+      position: absolute;
+
+  }
+  .about-us .about-info p{
+      width: 100%;
+      margin: auto;
+      font-weight: bold;
+  }
+  .about-us .about-info a{
+    background-color: #236c97;
+    padding: 5px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    margin-top: 40px;
+  }
+@media (max-width:768px){
+    .about-us {
+        height: 300px;
+    }
+    .hide{
+   display: none;
+    }
+    .about-us .about-info{
+        text-align: right;
+        top: 0%;
+        color: #707070;
+    }
+    .about-us .about-info h3{
+     color: #000;
+    }
+    .about-us .about-info p{
+        width: 85%;
+        margin: auto;
+        font-weight: bold;
+    }
+    .about-us .about-info a{
+        background-color: transparent;
+        text-decoration:underline;
+        color: #000;
+        display: inline-block;
+        font-weight: bold;
+        left: 40%;
+        position: absolute;
+      }
+
+}
+/* end about-us*/
+
+/* start contact-us*/
+
+.contact-us{
+margin-top: 60px;
+}
+
+.contact-us .contact-list {
+padding: 100px;
+}
+.contact-us .contact-list  ul li{
+    margin-bottom: 20px;
+}
+.svg-inline--fa{
+    color: #236c97;
+    margin-left: 20px;
+}
+
+.contact-us .contact-form {
+margin-top: 30px;
+}
+.contact-us .contact-form input , .contact-us .contact-form  textarea{
+    border-radius: 10px;
+    border: 1px solid #236c97;
+}
+.contact-us .contact-form input::placeholder{
+    text-align: right;
+}
+@media(max-width:768px){
+    .contact-us .contact-form  {
+
+        width: 50%;
+       padding: 20px 0px;
+       margin: auto;
+    }
+}
+
+
+
+/** end contact us*/
+/* start footer**/
+.footer{
+    background-color: #79a4be;
+    padding: 40px;
+}
+.footer .footer-info{
+    padding-top: 50px;
+}
+.footer .footer-img{
+    max-width: 100%;
+}
+.footer .footer-img img{
+    max-width: 100%;
+}
+
+.footer h3{
+    color: #fff;
+    text-align: center;
+}
+.footer p{
+    text-align: center;
+    font-weight: bold;
+}
+.footer .footer-list{
+    display: flex;
+}
+.footer .footer-list li{
+    font-weight: bold;
+}
+
+.copy{
+    background-color: #236c97;
+    text-align: right;
+    padding: 10px 100px 10px 10px;
+    color: #fff;
+}
+@media (max-width:768px){
+ .small{
+    flex: 0 0 51%;
+     max-width: 50%;
+ }
+ .copy{
+     text-align: center;
+ }
+}
+/** end footer**/
+/* services page*/
+.services{
+padding-top: 50px;
+}
+.services h2{
+    color: #000;
+
+}
+.services p{
+    width: 100%;
+   color: #707070;
+   font-weight: bold;
+}
+.our-services{
+    background-color: #e7eff3;
+    padding: 60px 0px;
+}
+.our-services h2{
+    color: #000;
+    font-weight: bold;
+}
+.our-services h3{
+    padding: 20px 0px;
+    color: #236c97;
+}
+.our-services ul li{
+    margin-bottom: 10px;
+    color: #707070;
+    font-weight: bold;
+
+}
+.our-services ul li::marker{
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+}
+.our-services .our-ser-img {
+max-width: 100%;
+border-radius: 50%;
+}
+.our-services .our-ser-img img{
+    max-width: 100%;
+    border-radius: 50%;
+    padding:40px;
+}
+.our-services .card .card-body{
+    text-align: center;
+}
+
+/* end services page*/
+
+/** about page**/
+.about , .massage ,.why-us{
+    text-align: right;
+}
+.about h2 , .massage h2 ,.why-us h2 {
+    color: #236c97;
+    padding-top: 30px;
+
+}
+.about p , .massage p {
+    color: #000;
+    font-weight: bold;
+    width: 70%;
+}
+
+
+
+
+
+/** end about page***/
+
+
+/** contact page***/
+.bg{
+    background-color: #e7eff3;
+    margin-top: 0;
+    padding-top: 30px;
+}
+.ways-communicate {
+    margin-top: 30px;
+}
+.ways-communicate .card{
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.ways-communicate .ways-icon{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+   border: 1px solid #707070;
+   margin: 30px  auto -8px auto;
+   position: relative;
+
+}
+.ways-communicate .ways-icon .svg-inline--fa{
+    display: inline-block;
+    color: #11a24e;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+}
+.ways-communicate  .ways-icon.blue  .svg-inline--fa{
+color: #236c97;
+}
+.ways-communicate  .ways-icon.white .svg-inline--fa{
+    color: #79a4be;
+    left: 0px;
+    top: 21px;
+    }
+.ways-communicate  .card .card-body{
+text-align: center;
+}
+.ways-communicate  .card .card-body p{
+color: #707070;
+}
+.ways-communicate  .card .card-body a{
+    border: 1px solid #707070;
+    border-radius: 8px;
+    /* background-color: red; */
+    width: 150px;
+}
+
+
+/** end contact page*/
+
+
+
+.sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 250px;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidepanel a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+
+  .openbtn:hover {
+    background-color:#444;
+  }
