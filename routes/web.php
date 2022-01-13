@@ -41,15 +41,16 @@ require __DIR__.'/auth.php';
 
 
 // Route::resource('home', HomeController::class);
-Route::resource('services', ServicesContoller::class);
-Route::resource('examples', ExamplesController::class);
-Route::resource('settings',SettingsController::class);
-Route::resource('images', IamgesController::class);
-Route::resource('contacts',ContactsController::class);
+
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/changePassword',[SettingController::class, 'showChangePasswordGet'])->name('changePasswordGet');
     Route::post('/changePassword',[SettingController::class, 'changePasswordPost'])->name('changePasswordPost');
+    Route::resource('services', ServicesContoller::class);
+    Route::resource('examples', ExamplesController::class);
+    Route::resource('settings',SettingsController::class);
+    Route::resource('images', IamgesController::class);
+    Route::resource('contacts',ContactsController::class);
 });
 Route::get('/',[UsersContoller::class,'index'])->name('index');
 Route::get('service',[UsersContoller::class,'service'])->name('service');
@@ -60,7 +61,7 @@ Route::post('contact',[UsersContoller::class,'postContact'])->name('contact-post
 Route::get('search',[UsersContoller::class,'search'])->name('search');
 
 
-Auth::routes();
+Auth::routes(['register',false]);
 
 
 

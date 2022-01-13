@@ -42,7 +42,7 @@ class ContactsController extends Controller
 
         // ]);
         Contact::create($request->all());
-        return redirect()->route('contacts.index')->with('msg',' تمت اضافة  النموذج بنجاح')->with('type','success');
+        return redirect()->route('contacts.index')->with('msg',' تمت الااضافة  بنجاح')->with('type','success');
     }
 
     /**
@@ -62,9 +62,9 @@ class ContactsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Contact $contact)
     {
-        //
+        return view('Admin.contact.edit',compact('contact'));
     }
 
     /**
@@ -74,9 +74,10 @@ class ContactsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Contact $contacts)
     {
-        //
+        $contacts->update($request->all());
+        return redirect()->route('contacts.index')->with('msg',' تمت التحديث بنجاح')->with('type','success');
     }
 
     /**

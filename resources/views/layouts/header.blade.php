@@ -3,11 +3,10 @@
 style=" background-image: url({{ $header_image ? $header_image->image : 'https://i.ytimg.com/vi/opwGsUHVrNI/maxresdefault.jpg'  }});">
       <!-- navbar-light bg-light -->
       <div class="layout"></div>
-      <nav class="navbar  navbar-expand-lg">
-        <div class="right d-flex ">
+      <nav class="navbar  navbar-expand-lg d-flex navbar-dark">
           <a class="navbar-brand " href="#">
-            <img src="{{ $title_image ? $title_image->image : 'https://i.ytimg.com/vi/opwGsUHVrNI/maxresdefault.jpg'  }}"  alt="">
-        </a>
+              <img src="{{ $title_image ? $title_image->image : 'https://i.ytimg.com/vi/opwGsUHVrNI/maxresdefault.jpg'  }}"  alt="">
+          </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -45,45 +44,47 @@ style=" background-image: url({{ $header_image ? $header_image->image : 'https:/
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('contact-get') }}">اتصل بنا </a>
               </li>
-              <li>
-                <button id="search_btn"><i class="fa fa-search " aria-hidden="true"></i> </button>
-              </li>
-              <li class="searchbar" >
-              <form class="form-inline my-2 my-lg-0"  method="GET" action="{{ url('/search') }}">
-                @csrf
-                     <div class="togglesearch d-flex">
-                        <button id="close_btn"> <span class="closebtn" title="Close Overlay">×</span></button>
-                        <input type="text" class="form-control w-50" name="search" id="srarch123" placeholder=""/>
-                        <input type="submit"   class="form-control w-5 "value="Search"/>
-                    </div>
-              </form>
-            </li>
-
-          </ul>
-        </div>
-        </div>
-
-        <div class="left">
-          <ul class="list-unstyled d-flex flex-row-reverse ">
-
-            <li class="mr-3">
-              <i class="fas fa-phone ml-1"></i>
-
-                  {{ $contacts[0]->link }}
-
-
-            </li>
-
-            <li>
-              <i class="fab fa-whatsapp ml-1 whatsapp"></i>
-
-              {{ $contacts[0]->link }}
-            </li>
 
 
           </ul>
         </div>
+      <div>
+            <button id="search_btn"><i class="fa fa-search " aria-hidden="true"></i> </button>
+      </div>
+
+          <div class="searchbar" >
+          <form class="form-inline my-2 my-lg-0"  method="GET" action="{{ url('/search') }}">
+            @csrf
+                 <div class="togglesearch d-flex">
+                    <button id="close_btn"> <span class="closebtn" title="Close Overlay">×</span></button>
+                    <input type="text" class="form-control w-50" name="search" id="srarch123" placeholder=""/>
+                    <input type="submit"   class="form-control w-5 "value="Search"/>
+                </div>
+          </form>
+
+      </div>
+      <div class="left">
+        <ul class="list-unstyled d-flex flex-row-reverse ">
+
+          <li class="mr-3">
+            <i class="fas fa-phone ml-1"></i>
+
+                {{ $contacts[0]->link }}
+
+
+          </li>
+
+          <li>
+            <i class="fab fa-whatsapp ml-1 whatsapp"></i>
+
+            {{ $contacts[0]->link }}
+          </li>
+
+
+        </ul>
+      </div>
       </nav>
+
 
       <div class="info">
         {{-- <h1>المنيع للإستشارات</h1> --}}

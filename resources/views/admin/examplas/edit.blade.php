@@ -21,13 +21,10 @@
         <label for="" class="mb-2"> الخدمات</label>
 
         <select name="service_id" class="form-control">
-            {{-- <option> {{ $services->title[1] }} </option> --}}
             @foreach ($services as $service)
             <option value="{{ $service->id }}">{{ $service->title}}</option>
             @endforeach
         </select>
-
-        {{-- <input type="text" name="price" placeholder="Price" class="form-control"> --}}
     </div>
     <button class="btn btn-success ">Update</button>
 
