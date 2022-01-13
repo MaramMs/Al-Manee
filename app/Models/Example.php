@@ -18,7 +18,7 @@ class Example extends Model
 
     public function setSrcAttribute($src)
     {
-        if (!$src|| $this->src == $src) {
+        if (!$src || $this->src == $src) {
             return;
         }
         if($this->id) {

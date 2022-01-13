@@ -16,10 +16,9 @@
     <label for="" class="mb-2">  ايقونات</label>
 
    <select class="form-control" name="icon">
-    <option value="far fa-envelope">فيسبوك </option>
-    <option value="far fa-envelope">  واتس اب</option>
-    <option value="far fa-envelope">  ايميل </option>
-    <option value="far fa-envelope">  مكالمة هاتف</option>
+    <option value="fab fa-whatsapp">  واتس اب</option>
+    <option value="fas fa-phone-volume">  مكالمة هاتف</option>
+    <option value="far fa-envelope">  البريد الكتروني</option>
     </select>
     </div>
 

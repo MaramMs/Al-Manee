@@ -5,7 +5,7 @@
    <a class="btn btn-primary px-5" href="{{ route('services.index') }}"> رجوع </a>
 </div>
 
-<form action="{{ route('services.store') }}" method="POST">
+<form action="{{ route('services.store') }}" method="POST" enctype="multipart/form-data" id="upload-image">
     @csrf
     <div class="mb-3">
         <label for="" class="font-weight-bold mb-2 ">نبذة  عن الخدمة</label>
@@ -19,6 +19,11 @@
     <div class="mb-3">
         <label for="" class="mb-2">  وصف الخدمة </label>
         <textarea name="content" class="ckeditor form-control" rows="5" placeholder="اوصف خدمتك"></textarea>
+
+    </div>
+    <div class="mb-3">
+        <label for="" class="mb-2">  صورة الخدمة </label>
+        <input type="file" name="img" id="image" placeholder="اسم الخدمة" class=" form-control">
 
     </div>
 

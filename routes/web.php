@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\ExamplesController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IamgesController;
@@ -44,16 +45,20 @@ Route::resource('services', ServicesContoller::class);
 Route::resource('examples', ExamplesController::class);
 Route::resource('settings',SettingsController::class);
 Route::resource('images', IamgesController::class);
+Route::resource('contacts',ContactsController::class);
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/changePassword',[SettingController::class, 'showChangePasswordGet'])->name('changePasswordGet');
     Route::post('/changePassword',[SettingController::class, 'changePasswordPost'])->name('changePasswordPost');
 });
+Route::get('/',[UsersContoller::class,'index'])->name('index');
+Route::get('service',[UsersContoller::class,'service'])->name('service');
+Route::get('service/{id}',[UsersContoller::class,'show'])->name('show');
+Route::get('about',[UsersContoller::class,'about'])->name('about');
+Route::get('contact',[UsersContoller::class,'getContact'])->name('contact-get');
+Route::post('contact',[UsersContoller::class,'postContact'])->name('contact-post');
+Route::get('search',[UsersContoller::class,'search'])->name('search');
 
-Route::get('about',[UsersContoller::class,'about']);
-Route::get('contact',[UsersContoller::class,'contact']);
-Route::get('service',[UsersContoller::class,'service']);
-Route::get('index',[UsersContoller::class,'index']);
 
 Auth::routes();
 

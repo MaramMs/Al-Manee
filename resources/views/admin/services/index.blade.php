@@ -12,6 +12,7 @@
         <th>  النبذة </th>
         <th> عنوان الخدمة</th>
         <th> وصف الخدمة </th>
+        <th> صورة الخدمة  </th>
         <th> مميزات الخدمة</th>
         <th> تاريخ الانشاء</th>
         <th> تاريخ التحديث </th>
@@ -24,6 +25,7 @@
             <td>{{ $service->brief}}</td>
             <td>{{ $service->title}}</td>
             <td>{{ $service->content}}</td>
+            <td>{{ $service->img}}</td>
             <td>{{ $service->features}}</td>
             <td>{{ $service->created_at->diffForHumans() }}</td>
             <td>{{ $service->updated_at->diffForHumans() }}</td>

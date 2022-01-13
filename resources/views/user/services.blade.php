@@ -1,14 +1,16 @@
 @extends('layouts.user-layout')
 @section('content')
+@include('layouts.header')
 <div class="services text-right">
     <div class="container">
         <h2> خدمة بناء الافكار لدينا</h2>
 
-        <p>
-            {!! $services[1]->content !!}
-
-            {{-- @foreach ($services as $service )
-            {!!   $service->content  !!}
+        <p name="service_id">
+            {!! $service->content !!}
+            {{-- {!! $services[1]->content !!} --}}
+{{--
+           @foreach ($service as $ser )
+            {!!   $ser->content  !!}
             @endforeach --}}
 
         </p>
@@ -21,18 +23,20 @@
            <h2>أعمالنا</h2>
 
            <h3> مميزات خدمة
-
-            {{-- @foreach ($services as $service )
+{{--
+            @foreach ($services as $service )
             {{ $service->title }}
             @endforeach --}}
-               {{ $services[1]->title }}
+               {{ $service->title }}
             </h3>
 
-           <ul>
+           <ul name="service_id">
 
-            @foreach ($services as $service )
+            {!! $service->features !!}
+
+            {{-- @foreach ($services as $service )
             <li>{!!  $service->features !!} </li>
-            @endforeach
+            @endforeach --}}
 
            </ul>
 
@@ -42,8 +46,6 @@
 
            <div class="row">
             @foreach ($examples as $example)
-
-
                <div class="col-4">
                    <div class="card" style="width: 15rem; height:31rem;">
                        <div class="our-ser-img">

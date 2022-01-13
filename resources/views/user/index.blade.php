@@ -1,6 +1,6 @@
 @extends('layouts.user-layout')
-@extends('layouts.header')
 @section('content')
+@include('layouts.header')
 
 
  <!-- Start Sercives-->
@@ -14,35 +14,16 @@
       </div>
 
       <div class="row  justify-content-around ">
-         @foreach ($services as $service )
-         <div class=" col-xs-12 col-md-3 ser">
-            <img src="{{ $images[0]->image }}" alt="">
-            <a href=""> {{ $service->title }} </a>
+        @foreach ($services as $service )
+         <div class=" col-xs-12 col-md-4 ser">
+            <img src="{{ $service->img }}" alt="">
+            <a href="service/{{ $service->id }}"> {{ $service->title }} </a>
           </div>
-         @endforeach
+          @endforeach
       </div>
-{{--
-      <div class="row  justify-content-around ">
-       <div class="col-xs-12 col-md-3  ser">
-         <img src="image/Create-bro.svg" alt="">
-         <a href="">بناء الافكار</a>
-       </div>
-       <div class="col-xs-12 col-md-3   ser">
-        <img src="image/Create-bro.svg" alt="">
-        <a href="">بناء الافكار</a>
-      </div>
-      <div class="col-xs-12 col-md-3  ser">
-        <img src="image/Create-bro.svg" alt="">
-        <a href="">بناء الافكار</a>
-      </div>
-     </div> --}}
-
-
 
     </div>
   </div>
-
-
   <!-- End Sercives-->
 
   <!-- start about us-->
@@ -52,8 +33,6 @@
     <div class="container">
       <h2>من نحن</h2>
        <div class="row">
-
-
          <div class="col-xs-12 col-md-6">
            <div class="about-info">
              <h3>المنيع للإستشارات</h3>
@@ -64,12 +43,12 @@
                 ذوي الخبرة في مجال تقديم الاستشارات والتدريبات في مجالات متنوعة --}}
             </p>
 
-             <a href="">المزيد</a>
+             <a href="{{ route('about') }}">المزيد</a>
            </div>
          </div>
          <div class="col-xs-12 col-md-6 hide">
            <div class="about-img ">
-             <img src="image/corporate-business-handshake-business-partners.jpg" alt="">
+             <img src="{{ $about_image->image }}" alt="">
            </div>
 
          </div>
@@ -95,16 +74,15 @@
 
          <div class="col-xs-12 col-md-6">
            <div class="contact-form">
-             <form action="">
-               <input class="form-control mb-3"type="text" placeholder="الاسم">
-               <input class="form-control mb-3"type="email" placeholder="البريد الالكتروني">
-               <input class="form-control mb-3"type="text" placeholder="عنوان الرسالة">
+             <form action="{{ route('contact-post') }}" method="POST">
+                @csrf
+               <input class="form-control mb-3"type="text" name="name" placeholder="الاسم">
+               <input class="form-control mb-3"type="email" name="email" placeholder="البريد الالكتروني">
+               <input class="form-control mb-3"type="text" name="subject" placeholder="عنوان الرسالة">
 
-               <textarea class="form-control" rows="5">
+               <textarea class="form-control" rows="5" name="massege"></textarea>
 
-               </textarea>
-
-               <button class="btn btn-primary w-100 mt-2"> إرسال</button>
+               <button class="btn btn-primary w-100 mt-2" href = "mailto:maramismail2015@gmail.com"  type="submit"> إرسال</button>
 
              </form>
            </div>

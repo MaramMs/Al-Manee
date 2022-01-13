@@ -41,7 +41,8 @@ class ServicesContoller extends Controller
             'brief'=>'required |string',
             'title'=>'required  | string',
             'content'=>'required | string',
-            'features' => 'required |string'
+            'features' => 'required |string',
+            'img' => 'required|image|mimes:jpg,png,jpeg,gif,svg',
 
         ]);
         Service::create($request->all());

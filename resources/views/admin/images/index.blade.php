@@ -26,11 +26,11 @@
             <td>{{ $image->created_at->diffForHumans() }}</td>
             <td>{{ $image->updated_at->diffForHumans() }}</td>
             <td>
-                {{-- <a href="{{ route('examples.edit' ,$example->id)  }}" class="btn btn-primary btn-sm"> <i class="fas fa-edit"></i> </a>
-                <form class="d-inline" action="{{ route('examples.destroy',$example->id) }}" method="POST">
+                {{-- <a href="{{ route('examples.edit' ,$image->id)  }}" class="btn btn-primary btn-sm"> <i class="fas fa-edit"></i> </a> --}}
+                <form class="d-inline" action="{{ route('images.destroy',$image->id) }}" method="POST">
                  @csrf
                  @method("delete")
-                  <button  onclick="return confirm('Are you sure ?')"class="btn btn-danger btn-sm"> <i class="fas fa-times"></i> </button> --}}
+                  <button  onclick="return confirm('Are you sure ?')"class="btn btn-danger btn-sm"> <i class="fas fa-times"></i> </button>
                 </form>
 
             </td>

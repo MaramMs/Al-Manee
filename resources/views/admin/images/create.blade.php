@@ -8,8 +8,18 @@
 <form action="{{ route('images.store') }}" method="POST" enctype="multipart/form-data" id="upload-image">
     @csrf
     <div class="mb-3">
-        <label for="" class=" mb-2 "> اسم الصورة </label>
-        <input type="text"  id="image" name="name" class="form-control" placeholder="صورة ج">
+        <label for="" class="mb-2">  اختر نوع الصورة</label>
+        <select name="name" class="form-control">
+            <option value="الشعار">  logo </option>
+           <option value=" الرئيسية">  الرئيسية </option>
+           <option value=" الخدمات ">    الخدمات </option>
+           <option value=" من نحن">  من نحن  </option>
+
+
+           <option value=" عنا">  الرئيسية -من نحن  </option>
+
+           <option value=" اتصل بنا">   اتصل بنا  </option>
+        </select>
     </div>
 
     <div class="mb-3">

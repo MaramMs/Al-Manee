@@ -86,8 +86,9 @@ class IamgesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Image $image)
     {
-        //
+        $image->delete();
+        return redirect()->route('images.index')->with('msg',' تم حذف  الصورة بنجاح')->with('type','info');
     }
 }

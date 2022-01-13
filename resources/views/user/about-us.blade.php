@@ -1,5 +1,6 @@
 @extends('layouts.user-layout')
 @section('content')
+@include('layouts.header')
 
  <!-- start about-us-->
 

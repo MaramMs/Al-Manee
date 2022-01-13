@@ -15,9 +15,6 @@
 
  @yield('content')
 
-
-
-
  <!-- start footer-->
 <div class="footer">
     <div class="container">
@@ -25,7 +22,7 @@
         <div class="row">
           <div class="col-xs-12 col-md-3">
             <div class="footer-img">
-              <img src="image/logoo.png" alt="">
+              <img  src="{{ $title_image ? $title_image->image : 'https://i.ytimg.com/vi/opwGsUHVrNI/maxresdefault.jpg'  }}" alt="">
             </div>
 
             <!-- <div class="soail">
